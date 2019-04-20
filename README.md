@@ -24,3 +24,8 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 
 ## How to use me?
 RUN `run.py` and just follow the guide! It's just that simple!
+
+## Extra Info
+Version.20190420
+Current version only supports Python projects and cannot help you with data collection.
+Any ideas about how to improve this project are welcomed in the repo issues!!
