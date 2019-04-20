@@ -9,7 +9,9 @@ Have you ever run into such situation during your research?
       some long process to simulate something...
 ```
 The above code will take up 40 loops to finish, which is so fxxking annoying, isn't it?
+
 Now, with Stupid Parallel Simulation to help you, you just need to do this:
+
 1. copy your simulation project into the directory where I am.
 2. tell me which script to begin with.
 3. modify the specific code to (notice that the indentation should also be modified slightly):
@@ -27,5 +29,7 @@ RUN `run.py` and just follow the guide! It's just that simple!
 
 ## Extra Info
 Version.20190420
+
 Current version only supports Python projects and cannot help you with data collection.
+
 Any ideas about how to improve this project are welcomed in the repo issues!!
