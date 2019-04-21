@@ -6,7 +6,7 @@ Have you ever run into such situation during your research work?
 ```
   for i in range(8):
     for j in range(5):
-      some long process to simulate something...
+      a long process to simulate something...
 ```
 The above code will take up 40 loops to finish, which is so fxxking annoying, isn't it?
 
@@ -18,7 +18,7 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 ```
   i=#p.1#
   j=#p.2#
-  some long process to simulate something...
+  a long process to simulate something...
 ```
 4. tell me what is #p.1# and #p.2#. (type in 0,1,2,3,4,5,6,7 for #p.1#)
 5. tell me how much parallel simulations you want to run at the same time.
