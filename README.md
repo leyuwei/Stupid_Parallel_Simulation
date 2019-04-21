@@ -2,7 +2,7 @@
 An easy script to help simulate your code in parallel mode. It will save you much time!
 
 ## Who am I?
-Have you ever run into such situation during your research?
+Have you ever run into such situation during your research work?
 ```
   for i in range(8):
     for j in range(5):
