@@ -27,8 +27,14 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 ## How to use me?
 RUN `run.py` and just follow the guide! It's just that simple!
 
+## Update Log
+0421 UPDATE
+- Added configuration file, which is a txt document, to simplify your work
+- Fixed the number control issue when runnning parallel simulations
+- Modified some expressions in the guide
+
 ## Extra Info
-Version.20190420
+Version.20190421
 
 Current version only supports Python projects and cannot help you with data collection.
 
