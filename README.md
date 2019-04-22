@@ -27,7 +27,7 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 7. start and hand it over to me. (I'll handle everything for you then!)
 
 ## Who am I? (for Matlab projects)
-For Matlab projects, the configuration procedures are almost the same as the previous section. Some few differences are listed below:
+For Matlab projects, the configuration procedures are almost the same as the previous section. Some few differences are listed as follows.
 
 Please change:
 ```
