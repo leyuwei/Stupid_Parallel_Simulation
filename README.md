@@ -98,6 +98,7 @@ Requirement: Python Version 3.6+
 0422 UPDATE
 - **Added support for Matlab projects**
 - Added a new function for data collection (see above for its usage)
+- Added a simulation progress indicator
 - Fixed a crash problem for repeated running on a certain project
 - Fixed a crash problem when Python project has `**` expressions
 
