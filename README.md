@@ -22,7 +22,8 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 ```
 4. tell me what is #p.1# and #p.2#. (type in 0,1,2,3,4,5,6,7 for #p.1#)
 5. tell me how much parallel simulations you want to run at the same time.
-6. start and hand over to me. (I'll handle everything for you then!)
+6. ask me to collect the output data for you automatically, if your codes have some output results.
+7. start and hand it over to me. (I'll handle everything for you then!)
 
 ## What is Configuration File?
 If your project directory is `test`, the configuration file should exist in the same directory where you run this script.
