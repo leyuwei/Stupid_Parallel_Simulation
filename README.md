@@ -29,9 +29,11 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 ## Who am I? (for Matlab projects)
 Please change:
 ```
-  for i = [1,2,3]:
-    for j = 2:4:
+  for i = [1,2,3]
+    for j = 2:4
       a long process to simulate something...
+    end
+  end
 ```
 To:
 ```
