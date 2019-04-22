@@ -27,6 +27,8 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 7. start and hand it over to me. (I'll handle everything for you then!)
 
 ## Who am I? (for Matlab projects)
+For Matlab projects, the configuration procedures are almost the same as the previous section. Some few differences are listed below:
+
 Please change:
 ```
   for i = [1,2,3]
@@ -63,21 +65,21 @@ It tells me you want to run `test\test.py`, while parameter 1 should iterate thr
 `output_folder` is not a required field, while others are all required for a fully functional configuration file!
 
 ## How to use me?
-RUN `run.py` and just follow the guide! It's just that simple!
+RUN `run.py` and just follow the guide! Or you can create a configuration file to skip the process! It's just that simple!
 
-Python Version 3.6+
+Requirement: Python Version 3.6+
 
 ## 中文简介
 
 **本项目解决什么问题？**
 
-一段耗时的代码，用到仿真参数i和j，i和j各长3，总共需要仿真9段循环，极其耗时！一般情况下，我们会复制该工程9次，分别修改下面的运行脚本为对应的i和j的组合，再分别打开运行，可以节省一些时间。但是！当代码一旦修改，复制9次的操作又将再来一遍！本项目就是为了帮助你自动完成这一伪并行化仿真的操作！
+假设一段耗时的代码，用到仿真参数i和j，i和j各长3，总共需要仿真9段循环，极其耗时！一般情况下，我们会复制该工程9次，分别修改下面的运行脚本为对应的i和j的组合，再分别打开运行，可以节省一些时间。但是！当代码一旦修改，复制9次的操作又将再来一遍！本项目就是为了帮助你自动完成这一伪并行化仿真的操作！
 
 **怎么用？**
 
 两种模式：
 
-[A] 按照脚本的指引来！请仔细看指引里的提示语句，虽然很多，但必须按照它来操作！ 
+[A] 按照脚本`run.py`的指引来！请仔细看指引里的提示语句，虽然很多，但必须按照它来操作！ 
 
 [B] 自己在把工程文件夹复制到脚本目录后，创建一个配置文件，工程叫`张三`，那么配置文件就叫`config_张三.txt`，按照上上节的介绍去写！运行run.py后先把工程名给它，配置文件就会自动读入，也就略过了指引步骤！
 
