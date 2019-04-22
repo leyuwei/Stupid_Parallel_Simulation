@@ -1,0 +1,6 @@
+name = test.m
+p.1 = 1,2,3
+p.2 = 3,4,5
+max_num = 2
+output_folder = results
+
