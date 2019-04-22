@@ -27,7 +27,7 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 ## What is Configuration File?
 If your project directory is `test`, the configuration file should exist in the same directory where you run this script.
 
-It looks like this:
+It should be named to `config_test.txt` and looks like this:
 
 ```
   name = test.py
