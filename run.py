@@ -5,6 +5,7 @@ import shutil
 import queue
 import threading
 import time
+import random
 
 def main():
 	print("Welcome to Stupid Parallel Simulation!")
@@ -35,6 +36,7 @@ def main():
 			paras = dict()
 			max_paras = 0
 			judger = [False]*3
+			output_folder = ''
 			with open(config_name,'r',encoding='UTF-8') as f:
 				for line in f.readlines():
 					if line.__contains__('='):
@@ -47,6 +49,8 @@ def main():
 						if k == 'max_num':
 							max_num = int(v)
 							judger[1] = True
+						if k == 'output_folder':
+							output_folder = str(v).strip(' ')
 						if k.strip('#').split('.')[0] == 'p':
 							judger[2] = True
 							paras[int(k.strip('#').split('.')[1])] = v.split(',')
@@ -127,9 +131,17 @@ def main():
 		sep()
 		max_num = int(input("a MAX number please:").strip(" "))
 
+		print()
+		sep()
+		print("STEP 8 : If you want me to help you collect the simulation output files, please tell me where?")
+		print("For example, if your result file is in test/re, you should give me `re` and I will collect the results for you!")
+		print("The names of output files should contain the simulation parameters, otherwise the files will be overwritten by me!")
+		sep()
+		output_folder = input("output folder name please:").strip(" ")
+
 	print()
 	sep()
-	print("STEP FINAL : Please wait for us to run your stupid codes, will you?")
+	print("FINAL STEP : Please wait for us to run your stupid codes, will you?")
 	sep()
 	print("Settings for your simulation:")
 	print("project name: %s and main script name: %s" % (dir_name,script_name))
@@ -139,6 +151,7 @@ def main():
 		print("parameter %d = %s" % (c,','.join(p)))
 		c = c + 1
 	print("max number of parallel simulations: %d" % max_num)
+	print("output folder: %s" % output_folder)
 	input("PRESS ANY KEY when you're ready to start the `parallel` simulation...")
 
 	print("Creating temporary directories for parallel simulations...")
@@ -171,7 +184,7 @@ def main():
 		threadpool[str(i)] = None
 	while True:
 		# Check Thread Status & Pop dead threads
-		threadpool = clear_threadpool(threadpool)
+		threadpool = clear_threadpool(threadpool, output_folder, dir_name)
 		# Check Termination Condition
 		if len_threadpool(threadpool) == 0 and full_target_queue.empty():
 			break
@@ -209,12 +222,24 @@ def fill_threadpool(name,t,tp):
 			break
 	return tp
 
-def clear_threadpool(tp):
+def clear_threadpool(tp, output_folder, dir_name):
 	for (k, v) in tp.items():
 		if not v == None and (not v[1].is_alive() or not v[1].isAlive()):
 			tp[k] = None
 			print("Simulation complete: %s ..." % v[0])
+			collect_output_data(v[0], output_folder, dir_name)
 	return tp
+
+def collect_output_data(instance_name, output_folder, dir_name):
+	if not os.path.exists(instance_name + '/' + output_folder):
+		return
+	if not os.path.exists(dir_name + '_sim' + '\\output_results'):
+		os.makedirs(dir_name + '_sim' + '\\output_results')
+	try:
+		copy_tree(instance_name + '\\' + output_folder, dir_name + '_sim' + '\\output_results')
+		print("Collected data for %s ..." % instance_name)
+	except:
+		print("Error when collecting data for %s ..." % instance_name)
 
 def len_threadpool(tp):
 	len = 0
@@ -223,8 +248,29 @@ def len_threadpool(tp):
 			len = len + 1
 	return len
 
+def copy_tree(path, out):
+	for files in os.listdir(path):
+		name = os.path.join(path, files)
+		back_name = os.path.join(out, files)
+		if os.path.isfile(name):
+			if os.path.isfile(back_name):
+				if not os.path.exists(back_name):
+					shutil.copy(name,back_name)
+				else:
+					new_name = str(back_name).split('.')
+					if len(new_name) > 1:
+						new_name = new_name[0] + '_' + str(random.randint(0,65535)) + '.' + new_name[1]
+					else:
+						new_name = back_name + str(random.randint(0,65535))
+					shutil.copy(name, new_name)
+			else:
+				shutil.copy(name, back_name)
+		else:
+			if not os.path.isdir(back_name):
+				os.makedirs(back_name)
+			copy_tree(name, back_name)
+
 def lists_combination(lists, code=''):
-	#输入多个列表组成的列表, 输出其中每个列表所有元素可能的所有排列组合code用于分隔每个元素
 	try:
 		import reduce
 	except:
