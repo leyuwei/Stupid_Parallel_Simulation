@@ -1,6 +1,7 @@
 # Stupid Parallel Simulation
 An easy script to help simulate your code in parallel mode.
-** Added Matlab Support !!! **
+
+**Added Matlab Support !!**
 
 ## Who am I? (for Python projects)
 Have you ever run into such situation during your research work?
