@@ -65,7 +65,7 @@ It tells me you want to run `test\test.py`, while parameter 1 should iterate thr
 
 `output_folder` is not a required field, while others are all required for a fully functional configuration file!
 
-## How to use me?
+## How to Use?
 RUN `run.py` and just follow the guide! Or you can create a configuration file to skip the process! It's just that simple!
 
 Requirement: Python Version 3.6+
