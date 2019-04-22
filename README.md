@@ -1,7 +1,7 @@
 # Stupid_Parallel_Simulation
 An easy script to help simulate your code in parallel mode. It will save you much time!
 
-## Who am I?
+## Who am I? (for Python projects)
 Have you ever run into such situation during your research work?
 ```
   for i in range(8):
@@ -24,18 +24,39 @@ Now, with Stupid Parallel Simulation to help you, you just need to do this:
 5. tell me how much parallel simulations you want to run at the same time.
 6. start and hand over to me. (I'll handle everything for you then!)
 
+## What is Configuration File?
+If your project directory is `test`, the configuration file should exist in the same directory where you run this script.
+
+It looks like this:
+
+```
+  name = test.py
+  p.1 = 1,2,3
+  p.2 = 3,4,5
+  max_num = 2
+  output_folder = re
+```
+
+It tells me you want to run `test\test.py`, parameter 1 should iterate through 1 to 3 and parameter 2 from 3 to 5. You want 2 simulations to run at the same time and you want me to collect your output results under folder `test\re` to a fixed directory named `output_results`.
+
+`output_folder` is not a required field, while others are all required for a functional configuration file!
+
 ## How to use me?
 RUN `run.py` and just follow the guide! It's just that simple!
 
 ## Update Log
+0422 UPDATE
+- Added a new function for data collection (see above for its usage)
+- Fixed a crash problem for repeated running on a certain project
+
 0421 UPDATE
 - Added configuration file, which is a txt document, to simplify your work
 - Fixed the number control issue when runnning parallel simulations
 - Modified some expressions in the guide
 
 ## Extra Info
-Version.20190421
+Version.20190422
 
-Current version only supports Python projects and cannot help you with data collection.
+Current version only supports Python projects. ~~and cannot help you with data collection.~~(0422 update added this function)
 
 Any ideas about how to improve this project are welcomed in the repo issues!!
