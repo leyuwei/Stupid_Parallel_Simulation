@@ -1,4 +1,4 @@
-# Stupid_Parallel_Simulation
+# Stupid Parallel Simulation
 An easy script to help simulate your code in parallel mode. It will save you much time!
 
 ## Who am I? (for Python projects)
@@ -37,7 +37,7 @@ It should be named to `config_test.txt` and looks like this:
   output_folder = re
 ```
 
-It tells me you want to run `test\test.py`, parameter 1 should iterate through 1 to 3 and parameter 2 from 3 to 5. You want 2 simulations to run at the same time and you want me to collect your output results under folder `test\re` to a fixed directory named `output_results`.
+It tells me you want to run `test\test.py`, while parameter 1 should iterate through 1 to 3 and parameter 2 from 3 to 5. You want 2 simulations to run at the same time and you want me to collect your output results under folder `test\re` to a fixed directory named `output_results`.
 
 `output_folder` is not a required field, while others are all required for a functional configuration file!
 
