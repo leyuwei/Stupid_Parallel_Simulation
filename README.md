@@ -96,6 +96,9 @@ Requirement: Python Version 3.6+
 7. 不看上面的注意事项你会后悔的，甚至可能运行出一堆错误！
 
 ## Update Log
+0917 UPDATE
+- Added support for comments after p.x variables in a configuration file
+
 0422 UPDATE
 - **Added support for Matlab projects**
 - Added a new function for data collection (see above for its usage)
