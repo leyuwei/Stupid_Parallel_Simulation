@@ -48,18 +48,19 @@ Please tell me that #p.1# is 1,2,3, and #p.2# is 2,3,4.
 
 **In addition**, PLEASE add a new command: `exit;` to the end of the Matlab script !!! Otherwise this script will not function properly !!!
 
-## What is a Configuration File?
+## Usage: Configuration File
 If your project directory is `test`, the configuration file should exist in the same directory where you run this script.
 
 It should be named to `config_test.txt` and looks like this:
 
 ```
   name = test.py
-  p.1 = 1,2,3
-  p.2 = 3,4,5
+  p.1 = 1,2,3 # Data1
+  p.2 = 3,4,5 # Data2
   max_num = 2
   output_folder = re
 ```
+**The configuration file now supports commenting after p.x variables!**
 
 It tells me you want to run `test\test.py`, while parameter 1 should iterate through 1 to 3 and parameter 2 from 3 to 5. You want 2 simulations to run at the same time and you want me to collect your output results under folder `test\re` to a fixed directory named `output_results`.
 
