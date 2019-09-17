@@ -57,9 +57,9 @@ def main():
 							judger[1] = True
 						if k == 'output_folder':
 							output_folder = str(v).strip(' ')
-						if k.strip('#').split('.')[0] == 'p':
+						if k.strip('#').strip(' ').split('.')[0] == 'p':
 							judger[2] = True
-							paras[int(k.strip('#').split('.')[1])] = v.split(',')
+							paras[int(k.strip('#').strip(' ').split('.')[1])] = v.replace(' ','').split('#')[0].split(',')
 							max_paras = max_paras + 1
 			para_list = sorted_dict_values(paras)
 			for j in judger:
