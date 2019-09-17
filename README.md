@@ -112,7 +112,7 @@ Requirement: Python Version 3.6+
 - Modified some expressions in the guide
 
 ## Extra Info
-Version.20190422
+Version.20190917
 
 Current version only supports Python projects. ~~and cannot help you with data collection.~~(0422 update added this function)
 
