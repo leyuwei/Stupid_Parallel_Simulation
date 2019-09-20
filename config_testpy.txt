@@ -1,6 +1,6 @@
 name = test.py
-p.1 = 1,2,3
-p.2 = 3,4,5
+p.1 = 1,2,3  # Data1
+p.2 = 3,4,5	 # Data2
 max_num = 2
 output_folder = re
 
